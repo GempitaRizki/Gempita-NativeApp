@@ -5,7 +5,10 @@ import DetailMenu from './DetailMenu'
 
 export default function MenuList () {
     return <FlatList data={menu} keyExtractor={(menu) => menu.id}
-        renderItem={({item}) => <DetailMenu {...item}/>}
+        renderItem={({item}) => 
+            <DetailMenu {...item}
+            />}
+        contentContainerStyle={{ paddingHorizontal : 15 }}
     />
 
 }

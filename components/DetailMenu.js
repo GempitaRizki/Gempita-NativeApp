@@ -29,19 +29,37 @@ export default function DetailMenu ({
                 <Text className="text-lg font-semibold dark:text-white">
                 {namaMenu}
                 </Text>
-                <View>
+                <View className="flex-row justify-between my-3">
+                <View className="flex-row item-center gap-3">
                     <AntDesign
                         name='minuscircleo'
                         size={24}
                         color={colorScheme === "light" ? "black" : "white"}
                         onPress={() => setCount(count -1)}
                     />
-                </View>
 
-                <Text>{keterangan}</Text>
-                <Text>{harga}</Text>
+                    <Text className="text-xl dark:text-white">{count}</Text>
+                    <AntDesign
+                        name='minuscircleo'
+                        size={24}
+                        color={colorScheme === "light" ? "black" : "white"}
+                        onPress={() => setCount(count +1)}
+                    />
+                        </View>
+                    </View>
+
+                <Text className="text-2xl font-extrabold dark:text-white">
+                    RP{harga * count }
+                </Text>
+
+                <Text numberOfLines={2} 
+                className="text-sm text-black/60 dark:text-white/70">{keterangan}
+                </Text>
+                <TouchableOpacity className="flex-row justify-center w-10/12 self-center mt-5 bg-black dark:bg-white p-3 rounded-full">
+                    <Text className="text-white dark:text-black font-bold">
+                        Masukan Keranjang</Text>
+                </TouchableOpacity>
             </View>
-
         </View>
     )
 }
