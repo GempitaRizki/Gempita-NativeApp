@@ -34,7 +34,7 @@ export default function DetailMenu ({
                     <AntDesign
                         name='minuscircleo'
                         size={24}
-                        color={colorScheme === "light" ? "black" : "white"}
+                        color={colorScheme === "light" }
                         onPress={() => setCount(count -1)}
                     />
 
@@ -42,7 +42,7 @@ export default function DetailMenu ({
                     <AntDesign
                         name='minuscircleo'
                         size={24}
-                        color={colorScheme === "light" ? "black" : "white"}
+                        color={colorScheme === "light"}
                         onPress={() => setCount(count +1)}
                     />
                         </View>

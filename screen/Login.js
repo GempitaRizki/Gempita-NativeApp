@@ -8,8 +8,9 @@ import {
 import React from "react";
 import colors from "../config/colors";
 import SPACING from "../config/SPACING";
+import { Button } from "react-native-paper";
 
-const Login = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
       style={{ flex: 1 }}
@@ -36,7 +37,7 @@ const Login = () => {
               textTransform: "capitalize",
             }}
           >
-            Gempita
+            MADANGO
           </Text>
           <Text
             style={{
@@ -45,9 +46,10 @@ const Login = () => {
               fontSize: SPACING * 1.7,
             }}
           >
-            Test Native
+            Aplikasi Makanan @GempitaRizki
           </Text>
           <TouchableOpacity
+            onPress={() => navigation.navigate('MenuList') } title='Next Screen'
             style={{
               padding: SPACING * 2,
               backgroundColor: colors.white,
@@ -56,15 +58,15 @@ const Login = () => {
               marginTop: SPACING * 3,
             }}
           >
-            <Text
+            <Button 
               style={{
                 color: colors.black,
                 fontSize: SPACING * 2,
                 fontWeight: "700",
               }}
             >
-              Button
-            </Text>
+              Masuk
+            </Button>
           </TouchableOpacity>
         </View>
       </View>
@@ -72,6 +74,6 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({});
