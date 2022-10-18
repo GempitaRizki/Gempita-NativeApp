@@ -1,15 +1,30 @@
-import { createBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+import { useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Body from './components/Layout/Body';
+import Container from './components/Layout/Container';
+import ListItem from './components/ListItem';
+import items from './dummy/items.json';
+import { listItemsState } from './recoil/items';
 
-const Tab = createBottomTabNavigator
+function tab() {
+  const [listItems, setListItems] = useRecoilState(listItemsState);
 
-const Tabs = () => {
-    return(
-        <Tab.Navigator>
-            <Tab.Screen name="Keranjang" component={Keranjang} />
-        </Tab.Navigator>
-    )
+  useEffect(() => {
+    setListItems(items);
+  }, [setListItems]);
+
+  return (
+    <Container>
+      <Header />
+      <Body>
+        <ListItem items={listItems} />
+      </Body>
+      <Footer />
+    </Container>
+  );
 }
 
-export default Tabs
-
-
+export default tab;

@@ -1,14 +1,14 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import Login from '../screen/Login'
+import Menu from '../screen/Menu'
 
 const { Navigator, Screen } = createStackNavigator()
 
 const Navigation = () => (
     <NavigationContainer>
-        <Navigator initialRouteName='Login'>
-            <Screen name="Login" component={Login}></Screen>
+        <Navigator initialRouteName='Menu'>
+            <Screen name="Menu" component={Menu}></Screen>
         </Navigator>
     </NavigationContainer>
 )

@@ -37,7 +37,7 @@ const WelcomeScreen = ({ navigation }) => {
               textTransform: "capitalize",
             }}
           >
-            MADANGO
+            Resto App
           </Text>
           <Text
             style={{
@@ -49,7 +49,7 @@ const WelcomeScreen = ({ navigation }) => {
             Aplikasi Makanan @GempitaRizki
           </Text>
           <TouchableOpacity
-            onPress={() => navigation.navigate('MenuList') } title='Next Screen'
+            onPress={() => navigation.navigate('DaftarMenu') } title='Next Screen'
             style={{
               padding: SPACING * 2,
               backgroundColor: colors.white,

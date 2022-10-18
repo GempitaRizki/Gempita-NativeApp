@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import Login from './screen/Login'
+import Home from './screen/Home'
 import MenuList from './components/MenuList'
 
 const Stack = createStackNavigator();
@@ -11,10 +11,10 @@ const Route = () => {
     <NavigationContainer>
       <Stack.Navigator>
           <Stack.Screen
-            name="Login"
-            component={Login}
+            name="Home"
+            component={Home}
           />
-          <Stack.Screen name="MenuList" component={MenuList} />
+          <Stack.Screen name="DaftarMenu" component={MenuList} />
       </Stack.Navigator>
     </NavigationContainer>
   )

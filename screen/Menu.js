@@ -20,5 +20,16 @@ export const menu = [
         rating: {
             rate: 4.0
         },  
+    },
+    {
+        id : 3,
+        namaMenu: "ES TEH ",
+        harga: 2500,
+        keterangan: "Minuman segar terbuat dari teh pilihan ",
+        category : "Minuman",
+        image : "https://doyanresep.com/wp-content/uploads/2020/04/resep-es-teh-manis.jpg",
+        rating: {
+            rate: 4.0
+        },  
     }
 ]

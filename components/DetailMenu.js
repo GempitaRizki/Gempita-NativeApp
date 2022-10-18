@@ -13,7 +13,7 @@ export default function DetailMenu ({
     const [count, setCount] = React.useState(1);
     const { colorScheme } = useColorScheme()
     return(
-        <View className="w-full bg-white dark:bg-gray-50/10 rounded-3xl p-5 my-5">
+        <View className="w-full bg-white rounded-3xl p-5 my-5">
             <View className="bg-white rounded-xl">
                 <Image 
                 source={{ uri: image}} 
@@ -22,11 +22,11 @@ export default function DetailMenu ({
                 />
             </View>
             <View className="mt-5">
-                <Text className="text-sm text-black/60 dark:text-white/70">
+                <Text className="text-sm text-black/60 ">
                 {category}
                 </Text>
 
-                <Text className="text-lg font-semibold dark:text-white">
+                <Text className="text-lg font-semibold ">
                 {namaMenu}
                 </Text>
                 <View className="flex-row justify-between my-3">
@@ -38,7 +38,7 @@ export default function DetailMenu ({
                         onPress={() => setCount(count -1)}
                     />
 
-                    <Text className="text-xl dark:text-white">{count}</Text>
+                    <Text className="text-xl ">{count}</Text>
                     <AntDesign
                         name='minuscircleo'
                         size={24}
@@ -48,12 +48,12 @@ export default function DetailMenu ({
                         </View>
                     </View>
 
-                <Text className="text-2xl font-extrabold dark:text-white">
+                <Text className="text-2xl font-extrabold ">
                     RP{harga * count }
                 </Text>
 
                 <Text numberOfLines={2} 
-                className="text-sm text-black/60 dark:text-white/70">{keterangan}
+                className="text-sm text-black/60 ">{keterangan}
                 </Text>
                 <TouchableOpacity className="flex-row justify-center w-10/12 self-center mt-5 bg-black dark:bg-white p-3 rounded-full">
                     <Text className="text-white dark:text-black font-bold">
